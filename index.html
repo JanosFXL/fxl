@@ -39,65 +39,67 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="section" id="home">
-    <div class="relative overflow-hidden">
-      <div class="absolute inset-0 brand-gradient opacity-10"></div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-            <span class="text-gradient">AI megoldások</span> a bevétel és a hatékonyság növelésére
-          </h1>
-          <p class="mt-5 text-lg text-gray-600">Egyedi, üzleti célokra hangolt AI rendszereket tervezünk és építünk – automatizálás, prediktív elemzés, ügyfélélmény javítás.</p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#feliratkozas" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">Korai érdeklődő leszek</a>
-            <a href="#szolgaltatasok" class="px-5 py-3 rounded-xl bg-white border border-gray-200 font-semibold hover:border-gray-300 transition">Mit tudunk?</a>
-          </div>
-          <div class="mt-8 grid grid-cols-3 gap-4 text-center">
-            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <div class="text-2xl font-extrabold">30–60%</div>
-              <div class="text-xs text-gray-500">időmegtakarítás</div>
-            </div>
-            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <div class="text-2xl font-extrabold">2–5x</div>
-              <div class="text-xs text-gray-500">gyorsabb bevezetés</div>
-            </div>
-            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <div class="text-2xl font-extrabold">ROI fókusz</div>
-              <div class="text-xs text-gray-500">mérhető hatás</div>
-            </div>
-          </div>
+ <!-- HERO -->
+<section class="section" id="home">
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 brand-gradient opacity-10"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          <span class="text-gradient">AI megoldások</span> a bevétel és a hatékonyság növelésére
+        </h1>
+        <p class="mt-5 text-lg text-gray-600">Egyedi, üzleti célokra hangolt AI rendszereket tervezünk és építünk – automatizálás, prediktív elemzés, ügyfélélmény javítás.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#feliratkozas" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">Korai érdeklődő leszek</a>
+          <a href="#szolgaltatasok" class="px-5 py-3 rounded-xl bg-white border border-gray-200 font-semibold hover:border-gray-300 transition">Mit tudunk?</a>
         </div>
-        <div class="relative">
-          <div class="aspect-[4/3] rounded-2xl bg-white border border-gray-100 shadow-xl p-6">
-            <div class="h-full grid grid-cols-2 gap-4">
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Ügyfélszolgálati automatizáció</p>
-                <p class="text-sm font-semibold">E-mail asszisztens</p>
-                <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
-              </div>
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Egyedi szoftverfejlesztés</p>
-                <p class="text-sm font-semibold">CRM, workflow</p>
-                <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
-              </div>
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Automatizálás</p>
-                <p class="text-sm font-semibold">Dokumentum-feldolgozás</p>
-                <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
-              </div>
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Kockázat</p>
-                <p class="text-sm font-semibold">Csalás-megelőzés</p>
-                <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
-              </div>
-            </div>
+        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+          <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="text-2xl font-extrabold">30–60%</div>
+            <div class="text-xs text-gray-500">időmegtakarítás</div>
           </div>
-          <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl brand-gradient opacity-20"></div>
+          <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="text-2xl font-extrabold">2–5x</div>
+            <div class="text-xs text-gray-500">gyorsabb bevezetés</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="text-2xl font-extrabold">ROI fókusz</div>
+            <div class="text-xs text-gray-500">mérhető hatás</div>
+          </div>
         </div>
       </div>
+      <div class="relative">
+        <!-- FIX: sm:aspect-[4/3] és grid-cols-1 mobilra -->
+        <div class="rounded-2xl bg-white border border-gray-100 shadow-xl p-6 sm:aspect-[4/3]">
+          <div class="h-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
+              <p class="text-xs text-gray-500 mb-2">Ügyfélszolgálati automatizáció</p>
+              <p class="text-sm font-semibold">E-mail asszisztens</p>
+              <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
+              <p class="text-xs text-gray-500 mb-2">Egyedi szoftverfejlesztés</p>
+              <p class="text-sm font-semibold">CRM, workflow</p>
+              <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
+              <p class="text-xs text-gray-500 mb-2">Automatizálás</p>
+              <p class="text-sm font-semibold">Dokumentum-feldolgozás</p>
+              <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
+            </div>
+            <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
+              <p class="text-xs text-gray-500 mb-2">Kockázat</p>
+              <p class="text-sm font-semibold">Csalás-megelőzés</p>
+              <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl brand-gradient opacity-20"></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
  <!-- VALUE PROPS -->
 <section class="section py-20" id="szolgaltatasok">
