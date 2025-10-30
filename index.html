@@ -96,16 +96,19 @@
     </div>
   </section>
 
-  <!-- VALUE PROPS -->
+ <!-- VALUE PROPS -->
 <section class="section py-20 bg-white" id="szolgaltatasok">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     <h2 class="text-4xl font-extrabold text-gradient mb-12 text-center drop-shadow-sm">Szolgáltatások</h2>
-    <div class="flex flex-col gap-8">
+    <div class="grid md:grid-cols-2 gap-8">
 
       <!-- Értékesítés automatizálása -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
-        <div class="flex items-center gap-2 mb-2">
-          <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 9V7a5 5 0 0110 0v2M17 9v2a5 5 0 01-10 0V9" /></svg>
+      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-8 flex flex-col gap-4 w-full">
+        <div class="flex items-center gap-3 mb-2">
+          <!-- Meglévő ikon marad -->
+          <svg class="w-9 h-9 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 9V7a5 5 0 0110 0v2M17 9v2a5 5 0 01-10 0V9" />
+          </svg>
           <h3 class="text-lg font-bold">Értékesítés automatizálása</h3>
         </div>
         <ul class="text-sm text-gray-700 space-y-1">
@@ -122,14 +125,17 @@
       </div>
 
       <!-- Repetitív back office automatizálás -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
-        <div class="flex items-center gap-2 mb-2">
-          <svg class="w-7 h-7 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" /></svg>
+      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-8 flex flex-col gap-4 w-full">
+        <div class="flex items-center gap-3 mb-2">
+          <!-- Fogaskerék (gear) ikon -->
+          <svg class="w-9 h-9 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7zm7.94-2.06a1 1 0 0 0 .24-1.11l-1-1.73a1 1 0 0 1 0-.86l1-1.73a1 1 0 0 0-.24-1.11l-1.42-1.43a1 1 0 0 0-1.11-.24l-1.73 1a1 1 0 0 1-.86 0l-1.73-1a1 1 0 0 0-1.11.24l-1.43 1.42a1 1 0 0 0-.24 1.11l1 1.73a1 1 0 0 1 0 .86l-1 1.73a1 1 0 0 0 .24 1.11l1.42 1.43a1 1 0 0 0 1.11.24l1.73-1a1 1 0 0 1 .86 0l1.73 1a1 1 0 0 0 1.11-.24l1.43-1.42z" />
+          </svg>
           <h3 class="text-lg font-bold">Repetitív back office feladatok automatizálása</h3>
         </div>
         <ul class="text-sm text-gray-700 space-y-1">
           <li>
-            <span class="font-semibold">Ügyfélszolgálat automatizálása</span> – Chat-, e-mail- és hangalapú csatornák kezelése, agent assist megoldások és tudásbázis-építés egyetlen platformon.
+            <span class="font-semibold">Ügyfélszolgálat automatizálása</span> – Chat-, e-mail- és hangalapú csatornák kezelése, agent assist megoldások és tudásbázis-építés egyetlen [...]
           </li>
           <li>
             <span class="font-semibold">Dokumentumkezelés</span> – Szerződések elemzése, árajánlatok összehasonlítása és automatikus dokumentumfeldolgozás.
@@ -141,9 +147,14 @@
       </div>
 
       <!-- Adat -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
-        <div class="flex items-center gap-2 mb-2">
-          <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 12l2 2 4-4" /></svg>
+      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-8 flex flex-col gap-4 w-full">
+        <div class="flex items-center gap-3 mb-2">
+          <!-- Chart ikon -->
+          <svg class="w-9 h-9 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="12" width="4" height="8" rx="1" />
+            <rect x="9" y="8" width="4" height="12" rx="1" />
+            <rect x="15" y="4" width="4" height="16" rx="1" />
+          </svg>
           <h3 class="text-lg font-bold">Adat</h3>
         </div>
         <ul class="text-sm text-gray-700 space-y-1">
@@ -160,9 +171,13 @@
       </div>
 
       <!-- Egyedi szoftverfejlesztés -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
-        <div class="flex items-center gap-2 mb-2">
-          <svg class="w-7 h-7 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" /><path d="M8 8h8v8H8z" /></svg>
+      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-8 flex flex-col gap-4 w-full">
+        <div class="flex items-center gap-3 mb-2">
+          <!-- Egyedi fejlesztés (puzzle + wrench) ikon -->
+          <svg class="w-9 h-9 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 13.255V7a2 2 0 0 0-2-2h-6.255a1 1 0 0 0-.707.293l-7 7a1 1 0 0 0 0 1.414l6.255 6.255a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 .293-.707z" />
+            <path d="M16.5 7.5l-7 7" />
+          </svg>
           <h3 class="text-lg font-bold">Egyedi szoftverfejlesztés</h3>
         </div>
         <ul class="text-sm text-gray-700 space-y-1">
@@ -176,15 +191,15 @@
             <span class="font-semibold">Ticketing és workflow rendszerek</span> – Automatizált folyamatok, átlátható feladatkezelés és skálázható működés egyetlen platformon.
           </li>
           <li>
-            <span class="font-semibold">További egyedi rendszerek</span> – Üzleti folyamataidhoz igazodó, testreszabott szoftvermegoldások személyre szabott fejlesztése, agilis bevezetése és támogatása.
+            <span class="font-semibold">További egyedi rendszerek</span> – Üzleti folyamataidhoz igazodó, testreszabott szoftvermegoldások személyre szabott fejlesztése, agilis bevezetése és[...]
           </li>
         </ul>
       </div>
 
       <!-- Team Augmentation -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
-        <div class="flex items-center gap-2 mb-2">
-          <svg class="w-7 h-7 text-teal-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" /><path d="M5.5 21a8.38 8.38 0 0113 0" /></svg>
+      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-8 flex flex-col gap-4 w-full md:col-span-2">
+        <div class="flex items-center gap-3 mb-2">
+          <svg class="w-9 h-9 text-teal-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" /><path d="M5.5 21a8.38 8.38 0 0113 0" /></svg>
           <h3 class="text-lg font-bold">Team Augmentation</h3>
         </div>
         <ul class="text-sm text-gray-700 space-y-1">
@@ -192,10 +207,10 @@
             <span class="font-semibold">Külső szakértők</span> – Nagyvállalati tapasztalattal rendelkező szakemberek integrálása gyorsan, rugalmasan, projekt alapon.
           </li>
           <li>
-            <span class="font-semibold">Business Analyst / Project Manager</span> – Üzleti és technológiai csapatok összekapcsolása, üzleti igények felmérése, specifikáció és projektvezetés.
+            <span class="font-semibold">Business Analyst / Project Manager</span> – Üzleti és technológiai csapatok összekapcsolása, üzleti igények felmérése, specifikáció és projektveze[...]
           </li>
           <li>
-            <span class="font-semibold">Python fejlesztő / Adatelemző</span> – Adatfeldolgozás, gépi tanulás (AI/ML) modellek fejlesztése, szoftverfejlesztési feladatok Python alapon technológiához igazodva.
+            <span class="font-semibold">Python fejlesztő / Adatelemző</span> – Adatfeldolgozás, gépi tanulás (AI/ML) modellek fejlesztése, szoftverfejlesztési feladatok Python alapon technol�[...]
           </li>
         </ul>
       </div>
