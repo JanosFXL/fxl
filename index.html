@@ -10,27 +10,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --grad: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #22c55e 100%);} 
-    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.7); }
+    :root {
+      --grad: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #22c55e 100%);
+      --bg-dark: #0a0a0a;
+      --surface-dark: #111827;
+      --text-light: #e5e7eb;
+      --text-dim: #9ca3af;
+      --border-dark: #1f2937;
+    }
+    html, body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
     .brand-gradient { background-image: var(--grad); }
     .text-gradient { background-image: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+    }
+    a, summary {
+      transition: color .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .card-dark {
+      background-color: var(--surface-dark);
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
     .section { scroll-margin-top: 96px; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+
+<body class="bg-[var(--bg-dark)] text-[var(--text-light)]">
+
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+  <header class="sticky top-0 z-50 glass border-b border-[var(--border-dark)]">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2">
         <div class="brand-gradient w-9 h-9 rounded-xl"></div>
         <span class="font-extrabold tracking-tight">FXL</span>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#rolunk" class="hover:text-blue-600">Rólunk</a>
-        <a href="#szolgaltatasok" class="hover:text-blue-600">Szolgáltatások</a>
-        <a href="#bizalom" class="hover:text-blue-600">Referenciák</a>
-        <a href="#feliratkozas" class="hover:text-blue-600">Kapcsolat</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--text-dim)]">
+        <a href="#rolunk" class="hover:text-white">Rólunk</a>
+        <a href="#szolgaltatasok" class="hover:text-white">Szolgáltatások</a>
+        <a href="#bizalom" class="hover:text-white">Referenciák</a>
+        <a href="#feliratkozas" class="hover:text-white">Kapcsolat</a>
       </nav>
       <a href="#feliratkozas" class="inline-flex items-center justify-center px-4 py-2 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition font-semibold shadow-sm">Kapcsolat</a>
     </div>
@@ -42,49 +66,49 @@
       <div class="absolute inset-0 brand-gradient opacity-10"></div>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-white">
            Legyen az <span class="text-gradient">automatizáció</span> vállalkozásod <span class="text-gradient">versenyelőnye</span>
           </h1>
-          <p class="mt-5 text-lg text-gray-600">AI megoldások üzleti környezetben</p>
+          <p class="mt-5 text-lg text-[var(--text-dim)]">AI megoldások üzleti környezetben</p>
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="#feliratkozas" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition cursor-pointer">Kapcsolat</a>
           </div>
           <div class="mt-8 grid grid-cols-3 gap-4 text-center">
-            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <div class="text-2xl font-extrabold">30–60%</div>
-              <div class="text-xs text-gray-500">időmegtakarítás</div>
+            <div class="p-4 rounded-xl card-dark">
+              <div class="text-2xl font-extrabold text-white">30–60%</div>
+              <div class="text-xs text-[var(--text-dim)]">időmegtakarítás</div>
             </div>
-            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <div class="text-2xl font-extrabold">2–5x</div>
-              <div class="text-xs text-gray-500">gyorsabb bevezetés</div>
+            <div class="p-4 rounded-xl card-dark">
+              <div class="text-2xl font-extrabold text-white">2–5x</div>
+              <div class="text-xs text-[var(--text-dim)]">gyorsabb bevezetés</div>
             </div>
-            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-              <div class="text-2xl font-extrabold">ROI fókusz</div>
-              <div class="text-xs text-gray-500">mérhető hatás</div>
+            <div class="p-4 rounded-xl card-dark">
+              <div class="text-2xl font-extrabold text-white">ROI fókusz</div>
+              <div class="text-xs text-[var(--text-dim)]">mérhető hatás</div>
             </div>
           </div>
         </div>
         <div class="relative">
-          <div class="aspect-[4/3] rounded-2xl bg-white border border-gray-100 shadow-xl p-6">
+          <div class="aspect-[4/3] rounded-2xl card-dark p-6">
             <div class="h-full grid grid-cols-2 gap-4">
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Ügyfélszolgálati automatizáció</p>
-                <p class="text-sm font-semibold">E-mail asszisztens</p>
+              <div class="rounded-xl bg-[#1e293b] border border-[var(--border-dark)] p-4">
+                <p class="text-xs text-[var(--text-dim)] mb-2">Ügyfélszolgálati automatizáció</p>
+                <p class="text-sm font-semibold text-white">E-mail asszisztens</p>
                 <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
               </div>
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Egyedi szoftverfejlesztés</p>
-                <p class="text-sm font-semibold">CRM, workflow</p>
+              <div class="rounded-xl bg-[#1e293b] border border-[var(--border-dark)] p-4">
+                <p class="text-xs text-[var(--text-dim)] mb-2">Egyedi szoftverfejlesztés</p>
+                <p class="text-sm font-semibold text-white">CRM, workflow</p>
                 <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
               </div>
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Automatizálás</p>
-                <p class="text-sm font-semibold">Dokumentum-feldolgozás</p>
+              <div class="rounded-xl bg-[#1e293b] border border-[var(--border-dark)] p-4">
+                <p class="text-xs text-[var(--text-dim)] mb-2">Automatizálás</p>
+                <p class="text-sm font-semibold text-white">Dokumentum-feldolgozás</p>
                 <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
               </div>
-              <div class="rounded-xl bg-gray-50 border border-gray-200 p-4">
-                <p class="text-xs text-gray-500 mb-2">Kockázat</p>
-                <p class="text-sm font-semibold">Csalás-megelőzés</p>
+              <div class="rounded-xl bg-[#1e293b] border border-[var(--border-dark)] p-4">
+                <p class="text-xs text-[var(--text-dim)] mb-2">Kockázat</p>
+                <p class="text-sm font-semibold text-white">Csalás-megelőzés</p>
                 <div class="mt-3 h-24 rounded-lg brand-gradient opacity-30"></div>
               </div>
             </div>
@@ -95,33 +119,34 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="rolunk" class="section relative py-24 bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
-    <div class="absolute inset-0 brand-gradient opacity-10"></div>
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <p class="text-xl sm:text-2xl font-semibold text-gray-800 leading-relaxed">
-        Az <span class="text-gradient font-extrabold">FXL</span> egy innovatív szoftverfejlesztő ügynökség, amely a szolgáltatásalapú vállalkozások folyamatait automatizálja mesterséges intelligencia-megoldásokkal — 
-        gyors megtérülést, átlátható működést és tartós versenyelőnyt biztosítva partnereink számára.
-      </p>
-      <div class="mt-10 flex justify-center">
-        <div class="w-24 h-1 rounded-full brand-gradient"></div>
-      </div>
+ <!-- ABOUT -->
+<section id="rolunk" class="section relative py-24 bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] overflow-hidden">
+  <div class="absolute inset-0 brand-gradient opacity-10 blur-3xl"></div>
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <p class="text-xl sm:text-2xl font-semibold leading-relaxed text-[var(--text-light)]">
+      Az <span class="text-gradient font-extrabold">FXL</span> egy innovatív szoftverfejlesztő ügynökség, amely a szolgáltatásalapú vállalkozások folyamatait 
+      automatizálja mesterséges intelligencia-megoldásokkal — gyors megtérülést, átlátható működést és tartós versenyelőnyt biztosítva partnereink számára.
+    </p>
+    <div class="mt-10 flex justify-center">
+      <div class="w-24 h-1 rounded-full brand-gradient shadow-[0_0_30px_rgba(99,102,241,0.6)]"></div>
     </div>
-  </section>
+  </div>
+</section>
+
   
   <!-- VALUE PROPS -->
-<section class="section py-20 bg-white" id="szolgaltatasok">
+<section class="section py-20 card-dark" id="szolgaltatasok">
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     <h2 class="text-4xl font-extrabold text-gradient mb-12 text-center drop-shadow-sm">Szolgáltatások</h2>
     <div class="flex flex-col gap-8">
 
       <!-- Értékesítés automatizálása -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
+      <div class="card-dark rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
         <div class="flex items-center gap-2 mb-2">
           <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 9V7a5 5 0 0110 0v2M17 9v2a5 5 0 01-10 0V9" /></svg>
           <h3 class="text-lg font-bold">Értékesítés automatizálása</h3>
         </div>
-        <ul class="text-sm text-gray-700 space-y-1">
+        <ul class="text-sm text-[var(--text-light)]700 space-y-1">
           <li>
             <span class="font-semibold">Telefonhívások elemzése</span> – Bejövő és kimenő hívások leiratozása, kivonatolása, valamint tudásbázis és analitika építése
           </li>
@@ -135,12 +160,12 @@
       </div>
 
       <!-- Repetitív back office automatizálás -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
+      <div class="card-dark rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
         <div class="flex items-center gap-2 mb-2">
           <svg class="w-7 h-7 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" /></svg>
           <h3 class="text-lg font-bold">Repetitív back office feladatok automatizálása</h3>
         </div>
-        <ul class="text-sm text-gray-700 space-y-1">
+        <ul class="text-sm text-[var(--text-light)]700 space-y-1">
           <li>
             <span class="font-semibold">Ügyfélszolgálat automatizálása</span> – Chat-, e-mail- és hangalapú csatornák kezelése, agent assist megoldások és tudásbázis-építés egyetlen platformon.
           </li>
@@ -154,12 +179,12 @@
       </div>
 
       <!-- Adat -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
+      <div class="card-dark rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
         <div class="flex items-center gap-2 mb-2">
           <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 12l2 2 4-4" /></svg>
           <h3 class="text-lg font-bold">Adat</h3>
         </div>
-        <ul class="text-sm text-gray-700 space-y-1">
+        <ul class="text-sm text-[var(--text-light)]700 space-y-1">
           <li>
             <span class="font-semibold">Adatvezérelt döntéshozatal</span> – Data engineering, tisztított és rendszerezett adatforrásokra épülő elemzések, analitika.
           </li>
@@ -173,12 +198,12 @@
       </div>
 
       <!-- Egyedi szoftverfejlesztés -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
+      <div class="card-dark rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
         <div class="flex items-center gap-2 mb-2">
           <svg class="w-7 h-7 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" /><path d="M8 8h8v8H8z" /></svg>
           <h3 class="text-lg font-bold">Egyedi szoftverfejlesztés</h3>
         </div>
-        <ul class="text-sm text-gray-700 space-y-1">
+        <ul class="text-sm text-[var(--text-light)]700 space-y-1">
           <li>
             <span class="font-semibold">CRM-megoldások</span> – Ügyfélkapcsolatok hatékony kezelése testreszabott funkciókkal és zökkenőmentes integrációval.
           </li>
@@ -195,12 +220,12 @@
       </div>
 
       <!-- Team Augmentation -->
-      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
+      <div class="card-dark rounded-2xl shadow-xl ring-1 ring-gray-200 p-6 flex flex-col gap-4">
         <div class="flex items-center gap-2 mb-2">
           <svg class="w-7 h-7 text-teal-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" /><path d="M5.5 21a8.38 8.38 0 0113 0" /></svg>
           <h3 class="text-lg font-bold">Team Augmentation</h3>
         </div>
-        <ul class="text-sm text-gray-700 space-y-1">
+        <ul class="text-sm text-[var(--text-light)]700 space-y-1">
           <li>
             <span class="font-semibold">Külső szakértők</span> – Nagyvállalati tapasztalattal rendelkező szakemberek integrálása gyorsan, rugalmasan, projekt alapon.
           </li>
@@ -221,54 +246,54 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold mb-6">Ügyfeleink mondták</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <p class="text-sm text-gray-700">Műszaki adatlapok tartalmának automatizált adatkigyűjtését valósította meg nálunk. A rendszer képes strukturálatlan szövegből is pontosan kinyerni a releváns információkat, és összehasonlító riportokat készít, ami jelentősen felgyorsítja és leegyszerűsíti az átvilágítási folyamatainkat. Ha LLM-alapú dokumentumfeldolgozásra van szükséged, az FXL kiváló partner.</p>
-          <div class="mt-4 text-xs text-gray-500">Gyurcsik Tibor, Komfotrade Zrt. ügyvezető</div>
+        <div class="card-dark p-6 rounded-2xl border border-gray-100 shadow-sm">
+          <p class="text-sm text-[var(--text-light)]700">Műszaki adatlapok tartalmának automatizált adatkigyűjtését valósította meg nálunk. A rendszer képes strukturálatlan szövegből is pontosan kinyerni a releváns információkat, és összehasonlító riportokat készít, ami jelentősen felgyorsítja és leegyszerűsíti az átvilágítási folyamatainkat. Ha LLM-alapú dokumentumfeldolgozásra van szükséged, az FXL kiváló partner.</p>
+          <div class="mt-4 text-xs text-[var(--text-light)]500">Gyurcsik Tibor, Komfotrade Zrt. ügyvezető</div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <p class="text-sm text-gray-700">A program lehetővé teszi a számlaadatok automatikus lekérdezését és exportálását. Emellett a rendszer támogatja a tömeges számlakibocsátást is: a megbízó által definiált sablon alapján automatikusan továbbítja a számlaadatokat az innVoice rendszerébe. Ha számlázási folyamataidat szeretnéd integrálni és automatizálni, az FXL megbízható partner ebben.</p>
-          <div class="mt-4 text-xs text-gray-500">Nyári Zsolt, K-X Consulting Kft. partner</div>
+        <div class="card-dark p-6 rounded-2xl border border-gray-100 shadow-sm">
+          <p class="text-sm text-[var(--text-light)]700">A program lehetővé teszi a számlaadatok automatikus lekérdezését és exportálását. Emellett a rendszer támogatja a tömeges számlakibocsátást is: a megbízó által definiált sablon alapján automatikusan továbbítja a számlaadatokat az innVoice rendszerébe. Ha számlázási folyamataidat szeretnéd integrálni és automatizálni, az FXL megbízható partner ebben.</p>
+          <div class="mt-4 text-xs text-[var(--text-light)]500">Nyári Zsolt, K-X Consulting Kft. partner</div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <p class="text-sm text-gray-700">A jobexport.hu panaszbejelentő felülete először csak egy ötlet volt a fejünkben. Az FXL magas szakmai színvonalon valósította meg ezt az elképzelést, aminek eredményeként egy hosszútávú együttműködés alakult ki közöttünk. Ha te is egyedi szoftverfejlesztési igényedhez keresel profi csapatot, az FXL a megfelelő választás.</p>
-          <div class="mt-4 text-xs text-gray-500">Kaiser Attila, Jobexport Zrt. ügyvezető</div>
+        <div class="card-dark p-6 rounded-2xl border border-gray-100 shadow-sm">
+          <p class="text-sm text-[var(--text-light)]700">A jobexport.hu panaszbejelentő felülete először csak egy ötlet volt a fejünkben. Az FXL magas szakmai színvonalon valósította meg ezt az elképzelést, aminek eredményeként egy hosszútávú együttműködés alakult ki közöttünk. Ha te is egyedi szoftverfejlesztési igényedhez keresel profi csapatot, az FXL a megfelelő választás.</p>
+          <div class="mt-4 text-xs text-[var(--text-light)]500">Kaiser Attila, Jobexport Zrt. ügyvezető</div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <p class="text-sm text-gray-700">A vállalkozásunk legfontosabb teljesítménymutatóihoz készítettek dashboardokat, így valós időben, akár a mobilunkról is tudjuk ezeket követni. Ha megbízható partnert keresel adatvizualizáció és döntéstámogatási rendszerek fejlesztéséhez, az FXL az ideális választás!</p>
-          <div class="mt-4 text-xs text-gray-500">Varga Martin, Wermamba Kft. társtulajdonos</div>
+        <div class="card-dark p-6 rounded-2xl border border-gray-100 shadow-sm">
+          <p class="text-sm text-[var(--text-light)]700">A vállalkozásunk legfontosabb teljesítménymutatóihoz készítettek dashboardokat, így valós időben, akár a mobilunkról is tudjuk ezeket követni. Ha megbízható partnert keresel adatvizualizáció és döntéstámogatási rendszerek fejlesztéséhez, az FXL az ideális választás!</p>
+          <div class="mt-4 text-xs text-[var(--text-light)]500">Varga Martin, Wermamba Kft. társtulajdonos</div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <p class="text-sm text-gray-700">A cégünknek szervezett Power BI oktatás rendkívül hasznosnak bizonyult. A trénerek valódi üzleti életben szerzett tapasztalataikkal, teljes mértékben gyakorlati képzéseket tartottak.  Csapatunk 14 tagja sajátította el a legfontosabb adatelemzési technikákat, és lett képes vizualizációk önálló készítésére.</p>
-          <div class="mt-4 text-xs text-gray-500">Béda Olga, ACPS Automotive képzési specialista</div>
+        <div class="card-dark p-6 rounded-2xl border border-gray-100 shadow-sm">
+          <p class="text-sm text-[var(--text-light)]700">A cégünknek szervezett Power BI oktatás rendkívül hasznosnak bizonyult. A trénerek valódi üzleti életben szerzett tapasztalataikkal, teljes mértékben gyakorlati képzéseket tartottak.  Csapatunk 14 tagja sajátította el a legfontosabb adatelemzési technikákat, és lett képes vizualizációk önálló készítésére.</p>
+          <div class="mt-4 text-xs text-[var(--text-light)]500">Béda Olga, ACPS Automotive képzési specialista</div>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <p class="text-sm text-gray-700">A honlapunkon működő értékesítési asszisztens, Lucia, egy ChatGPT-alapú chatbot. Az FXL csapata gyorsan és professzionálisan végezte el a fejlesztési feladatokat, túlteljesítve minden elvárásunkat. Szívből ajánlom őket annak, aki megbízható partnert keres üzleti folyamatainak automatizálásához!</p>
-          <div class="mt-4 text-xs text-gray-500">Cseh Károly, Danum s.r.o. tulajdonos</div>
+        <div class="card-dark p-6 rounded-2xl border border-gray-100 shadow-sm">
+          <p class="text-sm text-[var(--text-light)]700">A honlapunkon működő értékesítési asszisztens, Lucia, egy ChatGPT-alapú chatbot. Az FXL csapata gyorsan és professzionálisan végezte el a fejlesztési feladatokat, túlteljesítve minden elvárásunkat. Szívből ajánlom őket annak, aki megbízható partnert keres üzleti folyamatainak automatizálásához!</p>
+          <div class="mt-4 text-xs text-[var(--text-light)]500">Cseh Károly, Danum s.r.o. tulajdonos</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section py-20 bg-white" id="gyik">
+  <section class="section py-20 card-dark" id="gyik">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold mb-8">Gyakori kérdések</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <details class="card-dark rounded-2xl border border-gray-100 shadow-sm p-6">
           <summary class="font-semibold cursor-pointer">Hogyan gyűjtitek az e-maileket GitHub Pages-en?</summary>
-          <p class="mt-3 text-sm text-gray-600">Kliensoldali űrlap-szolgáltatóval (pl. Formspree). Az alábbi űrlap már össze van kötve, csak a saját űrlap-azonosítót kell megadni.</p>
+          <p class="mt-3 text-sm text-[var(--text-light)]600">Kliensoldali űrlap-szolgáltatóval (pl. Formspree). Az alábbi űrlap már össze van kötve, csak a saját űrlap-azonosítót kell megadni.</p>
         </details>
-        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <details class="card-dark rounded-2xl border border-gray-100 shadow-sm p-6">
           <summary class="font-semibold cursor-pointer">Mi a bevezetés tipikus átfutása?</summary>
-          <p class="mt-3 text-sm text-gray-600">1–2 hónap, az adatkészültségtől és az integrációk számától függően.</p>
+          <p class="mt-3 text-sm text-[var(--text-light)]600">1–2 hónap, az adatkészültségtől és az integrációk számától függően.</p>
         </details>
-        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <details class="card-dark rounded-2xl border border-gray-100 shadow-sm p-6">
           <summary class="font-semibold cursor-pointer">Milyen modelleket használtok?</summary>
-          <p class="mt-3 text-sm text-gray-600">Üzleti célhoz választunk: nyílt forrású és felhős LLM-ek, klasszikus ML, valamint RAG/agent minták.</p>
+          <p class="mt-3 text-sm text-[var(--text-light)]600">Üzleti célhoz választunk: nyílt forrású és felhős LLM-ek, klasszikus ML, valamint RAG/agent minták.</p>
         </details>
-        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+        <details class="card-dark rounded-2xl border border-gray-100 shadow-sm p-6">
           <summary class="font-semibold cursor-pointer">Hogyan mérjük az ROI-t?</summary>
-          <p class="mt-3 text-sm text-gray-600">Előre definiált KPI-okon: időmegtakarítás, bevételnövekedés, hibaarány-csökkenés.</p>
+          <p class="mt-3 text-sm text-[var(--text-light)]600">Előre definiált KPI-okon: időmegtakarítás, bevételnövekedés, hibaarány-csökkenés.</p>
         </details>
       </div>
     </div>
@@ -277,9 +302,9 @@
   <!-- KAPCSOLAT -->
   <section class="section py-20" id="feliratkozas">
   <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-    <div class="p-8 rounded-2xl border border-gray-200 bg-white shadow-sm text-center">
+    <div class="p-8 rounded-2xl border border-gray-200 card-dark shadow-sm text-center">
       <h2 class="text-2xl font-extrabold mb-2">Kapcsolat</h2>
-      <p class="mt-2 text-gray-600 mb-6">Vedd fel velünk a kapcsolatot e-mailben vagy telefonon!</p>
+      <p class="mt-2 text-[var(--text-light)]600 mb-6">Vedd fel velünk a kapcsolatot e-mailben vagy telefonon!</p>
       <div class="mb-4">
         <div class="text-lg font-semibold select-all">info@fxltech.com</div>
         <div class="text-lg font-semibold select-all">+36 30 286 7711</div>
@@ -291,9 +316,9 @@
 
   
   <!-- FOOTER -->
-  <footer class="py-10 border-t border-gray-100 bg-white">
+  <footer class="py-10 border-t border-gray-100 card-dark">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-gray-500">© <span id="year"></span> FXL - Minden jog fenntartva.</p>
+      <p class="text-sm text-[var(--text-light)]500">© <span id="year"></span> FXL - Minden jog fenntartva.</p>
       <div class="flex items-center gap-4 text-sm">
         <a href="#gyik" class="hover:text-blue-600">GYIK</a>
         <a href="#" class="hover:text-blue-600">Adatkezelés</a>
