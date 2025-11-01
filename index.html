@@ -213,7 +213,48 @@
     </div>
   </div>
 </section>
-  
+
+  <!-- ÜGYFELEINK LOGÓK -->
+<section id="ugyfeleink" class="section py-20 relative overflow-hidden bg-[var(--bg-dark)]">
+  <div class="absolute inset-0 brand-gradient opacity-10 blur-3xl"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-gradient mb-12">Ügyfeleink</h2>
+
+    <!-- Forgó logósáv -->
+    <div class="relative overflow-hidden">
+      <div class="animate-logo-scroll flex items-center gap-20 grayscale opacity-70 hover:opacity-100 transition">
+        <img src="logos/komfotrade.svg" alt="Komfotrade Zrt." class="h-12 w-auto" />
+        <img src="logos/danum.svg" alt="Danum s.r.o." class="h-12 w-auto" />
+        <img src="logos/jobexport.svg" alt="Jobexport Zrt." class="h-12 w-auto" />
+        <img src="logos/acps.svg" alt="ACPS Automotive" class="h-12 w-auto" />
+        <img src="logos/wermamba.svg" alt="Wermamba Kft." class="h-12 w-auto" />
+        <img src="logos/kxconsulting.svg" alt="K-X Consulting Kft." class="h-12 w-auto" />
+
+        <!-- duplikálva a végtelen hatásért -->
+        <img src="logos/komfotrade.svg" alt="Komfotrade Zrt." class="h-12 w-auto" />
+        <img src="logos/danum.svg" alt="Danum s.r.o." class="h-12 w-auto" />
+        <img src="logos/jobexport.svg" alt="Jobexport Zrt." class="h-12 w-auto" />
+        <img src="logos/acps.svg" alt="ACPS Automotive" class="h-12 w-auto" />
+        <img src="logos/wermamba.svg" alt="Wermamba Kft." class="h-12 w-auto" />
+        <img src="logos/kxconsulting.svg" alt="K-X Consulting Kft." class="h-12 w-auto" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes logo-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-logo-scroll {
+  display: flex;
+  width: max-content;
+  animation: logo-scroll 50s linear infinite;
+}
+</style>
+
    <!-- TESTIMONIALS / TRUST -->
   <section class="section py-20" id="bizalom">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
